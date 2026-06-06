@@ -1,0 +1,89 @@
+# Finance App
+
+Вебзастосунок для керування особистими фінансами: користувач може створити акаунт, підключити Monobank, синхронізувати рахунки й транзакції, переглядати Dashboard, аналітику, ліміти та звіти.
+
+## Технології
+
+- Frontend: React + Vite
+- Backend: Node.js + Express
+- База даних: локальна PostgreSQL
+- ORM: Sequelize
+- Авторизація: JWT
+- Банківська інтеграція: Monobank API
+
+## Локальний запуск
+
+1. Встановити залежності для backend:
+
+```bash
+cd server
+npm install
+```
+
+2. Встановити залежності для frontend:
+
+```bash
+cd ../client
+npm install
+```
+
+3. Запустити локальний PostgreSQL.
+
+4. Створити базу даних, наприклад:
+
+```sql
+CREATE DATABASE personal_finance;
+```
+
+5. Створити файл `server/.env` на основі `server/.env.example` і заповнити налаштування.
+
+Приклад backend `.env`:
+
+```env
+PORT=5001
+CLIENT_URL=http://localhost:5173
+
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=personal_finance
+DB_USER=postgres
+DB_PASSWORD=your_database_password
+
+JWT_SECRET=replace_with_a_long_random_secret
+MONOBANK_TOKEN_SECRET=replace_with_a_long_random_secret_for_bank_tokens
+
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=your-email@example.com
+SMTP_PASSWORD=your-smtp-password
+MAIL_FROM="Finance App <your-email@example.com>"
+```
+
+`MONOBANK_TOKEN_SECRET` використовується для шифрування Monobank token у базі даних. SMTP-змінні потрібні для відправки листів відновлення пароля.
+
+## Команди запуску
+
+Backend:
+
+```bash
+cd server
+npm run dev
+```
+
+Frontend:
+
+```bash
+cd client
+npm run dev
+```
+
+Після запуску frontend буде доступний за адресою `http://localhost:5173`, backend API - за `http://localhost:5001/api`.
+
+## Чому використовується тільки Monobank
+
+Наразі в застосунку реально реалізована інтеграція з Monobank, тому що Monobank має зручний personal API: користувач сам генерує токен у кабінеті Monobank API, вставляє його в застосунок, і система може отримувати його рахунки та транзакції.
+
+Інші українські банки переважно працюють не через такий простий токен, а через Open Banking. Це законна й безпечна модель доступу до банківських даних, але для її повної реалізації сервіс має бути авторизованим стороннім провайдером, наприклад AISP - надавачем послуг доступу до інформації з рахунків. Для цього потрібна юридична особа, проходження авторизації, технічні сертифікати, налаштування згоди користувача та окрема інтеграція з банківськими API.
+
+Тому в поточній версії доцільно залишити Monobank як робочу інтеграцію. Підключення ПриватБанку, Ощадбанку, ПУМБ та інших банків краще винести в перспективи розвитку, оскільки для безпечної та законної роботи з ними потрібно проходити повноцінну процедуру Open Banking.
