@@ -35,7 +35,8 @@ export default function ForgotPassword() {
           <span className="eyebrow">Відновлення доступу</span>
           <h1>Поверніться до свого бюджету</h1>
           <p>
-            Вкажіть email акаунта, і ми надішлемо лист для зміни пароля
+            Вкажіть електронну пошту акаунта, і ми надішлемо лист для зміни
+            пароля
           </p>
         </div>
 
@@ -49,7 +50,7 @@ export default function ForgotPassword() {
           {message ? <p className="form-success">{message}</p> : null}
 
           <label className="field">
-            <span>Email</span>
+            <span>Електронна пошта</span>
             <div className="input-wrap">
               <Mail size={18} aria-hidden="true" />
               <input

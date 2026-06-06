@@ -1,11 +1,11 @@
-# Finance App
+# Фінансовий застосунок
 
-Вебзастосунок для керування особистими фінансами: користувач може створити акаунт, підключити Monobank, синхронізувати рахунки й транзакції, переглядати Dashboard, аналітику, ліміти та звіти.
+Вебзастосунок для керування особистими фінансами: користувач може створити акаунт, підключити Monobank, синхронізувати рахунки й транзакції, переглядати огляд фінансів, аналітику, ліміти та звіти.
 
 ## Технології
 
-- Frontend: React + Vite
-- Backend: Node.js + Express
+- Клієнтська частина: React + Vite
+- Серверна частина: Node.js + Express
 - База даних: локальна PostgreSQL
 - ORM: Sequelize
 - Авторизація: JWT
@@ -13,14 +13,14 @@
 
 ## Локальний запуск
 
-1. Встановити залежності для backend:
+1. Встановити залежності для серверної частини:
 
 ```bash
 cd server
 npm install
 ```
 
-2. Встановити залежності для frontend:
+2. Встановити залежності для клієнтської частини:
 
 ```bash
 cd ../client
@@ -37,7 +37,7 @@ CREATE DATABASE personal_finance;
 
 5. Створити файл `server/.env` на основі `server/.env.example` і заповнити налаштування.
 
-Приклад backend `.env`:
+Приклад `.env` для серверної частини:
 
 ```env
 PORT=5001
@@ -57,28 +57,28 @@ SMTP_PORT=465
 SMTP_SECURE=true
 SMTP_USER=your-email@example.com
 SMTP_PASSWORD=your-smtp-password
-MAIL_FROM="Finance App <your-email@example.com>"
+MAIL_FROM="Фінансовий застосунок <your-email@example.com>"
 ```
 
-`MONOBANK_TOKEN_SECRET` використовується для шифрування Monobank token у базі даних. SMTP-змінні потрібні для відправки листів відновлення пароля.
+`MONOBANK_TOKEN_SECRET` використовується для шифрування токена Monobank у базі даних. SMTP-змінні потрібні для відправки листів відновлення пароля.
 
 ## Команди запуску
 
-Backend:
+Серверна частина:
 
 ```bash
 cd server
 npm run dev
 ```
 
-Frontend:
+Клієнтська частина:
 
 ```bash
 cd client
 npm run dev
 ```
 
-Після запуску frontend буде доступний за адресою `http://localhost:5173`, backend API - за `http://localhost:5001/api`.
+Після запуску клієнтська частина буде доступна за адресою `http://localhost:5173`, серверний API - за `http://localhost:5001/api`.
 
 ## Чому використовується тільки Monobank
 

@@ -120,7 +120,7 @@ export default function Profile() {
           </label>
 
           <label className="field">
-            <span>Email</span>
+            <span>Електронна пошта</span>
             <div className="input-wrap readonly-input">
               <Mail size={18} aria-hidden="true" />
               <input readOnly type="email" value={user?.email || ""} />

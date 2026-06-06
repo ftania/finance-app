@@ -66,6 +66,7 @@ export default function Dashboard() {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const currency = summary.currency || user?.currency || "UAH";
+  const firstName = user?.fullName?.trim().split(/\s+/)[0];
 
   useEffect(() => {
     let shouldIgnore = false;
@@ -83,7 +84,7 @@ export default function Dashboard() {
         if (!shouldIgnore) {
           setError(
             requestError.response?.data?.message ||
-              "Не вдалося завантажити Dashboard",
+              "Не вдалося завантажити огляд",
           );
         }
       } finally {
@@ -153,7 +154,7 @@ export default function Dashboard() {
       <section className="dashboard-hero dashboard-hero-rich">
         <div>
           <span className="eyebrow">{formatFullDate(summary.currentDate)}</span>
-          <h1>Вітаємо, {user?.fullName || "радо бачити вас"}</h1>
+          <h1>Вітаємо, {firstName || "радо бачити вас"}</h1>
           <p>
             Ваш баланс, рух коштів за сьогодні та результат поточного місяця
           </p>

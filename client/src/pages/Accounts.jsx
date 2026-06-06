@@ -211,13 +211,13 @@ export default function Accounts() {
           ) : null}
 
           <label className="field">
-            <span>Token</span>
+            <span>Токен</span>
             <div className="input-wrap">
               <input
                 autoComplete="off"
                 name="token"
                 onChange={(event) => setToken(event.target.value)}
-                placeholder="Вставте token Monobank"
+                placeholder="Вставте токен Monobank"
                 required
                 type="password"
                 value={token}

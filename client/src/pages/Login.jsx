@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import eyeOffIcon from "../assets/eye-off-grey.svg";
 import eyeIcon from "../assets/eye-grey.svg";
+import laptopImage from "../assets/laptop.png";
 import { useAuth } from "../context/useAuth";
 
 export default function Login() {
@@ -52,6 +53,9 @@ export default function Login() {
           <p>
             Керуйте доходами, витратами й рахунками в одному зручному місці
           </p>
+          <div className="auth-laptop-frame" aria-hidden="true">
+            <img src={laptopImage} alt="" />
+          </div>
         </div>
 
         <form className="auth-card" onSubmit={handleSubmit}>
@@ -63,7 +67,7 @@ export default function Login() {
           {error ? <p className="form-error">{error}</p> : null}
 
           <label className="field">
-            <span>Email</span>
+            <span>Електронна пошта</span>
             <div className="input-wrap">
               <Mail size={18} aria-hidden="true" />
               <input

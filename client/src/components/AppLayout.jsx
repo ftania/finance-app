@@ -13,7 +13,7 @@ import { useAuth } from "../context/useAuth";
 
 const navItems = [
   {
-    label: "Dashboard",
+    label: "Огляд",
     icon: LayoutDashboard,
     to: "/dashboard",
   },
@@ -64,7 +64,7 @@ export default function AppLayout() {
         <div className="sidebar-brand">
           <div className="brand-mark">F</div>
           <div>
-            <strong>Finance App</strong>
+            <strong>Фінанси</strong>
             <span>Особистий бюджет</span>
           </div>
         </div>

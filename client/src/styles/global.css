@@ -21,7 +21,12 @@ body {
     "Segoe UI",
     sans-serif;
   background:
-    linear-gradient(135deg, rgba(255, 244, 229, 0.72), rgba(239, 246, 255, 0.68) 42%, rgba(243, 245, 249, 0.98)),
+    linear-gradient(
+      135deg,
+      rgba(255, 244, 229, 0.72),
+      rgba(239, 246, 255, 0.68) 42%,
+      rgba(243, 245, 249, 0.98)
+    ),
     var(--color-bg);
 }
 
@@ -57,7 +62,11 @@ a:hover {
   min-height: 100vh;
   grid-template-columns: 280px minmax(0, 1fr);
   background:
-    linear-gradient(180deg, rgba(251, 248, 242, 0.92), rgba(243, 245, 249, 0.96) 360px),
+    linear-gradient(
+      180deg,
+      rgba(251, 248, 242, 0.92),
+      rgba(243, 245, 249, 0.96) 360px
+    ),
     var(--color-bg);
 }
 
@@ -70,7 +79,12 @@ a:hover {
   border-right: 1px solid rgba(226, 232, 240, 0.78);
   padding: 24px;
   background:
-    linear-gradient(180deg, rgba(255, 244, 229, 0.72), rgba(255, 255, 255, 0.82) 38%, rgba(248, 250, 252, 0.9)),
+    linear-gradient(
+      180deg,
+      rgba(255, 244, 229, 0.72),
+      rgba(255, 255, 255, 0.82) 38%,
+      rgba(248, 250, 252, 0.9)
+    ),
     rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(16px);
 }
@@ -130,7 +144,9 @@ a:hover {
   background:
     linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(255, 244, 229, 0.92)),
     var(--color-accent-soft);
-  box-shadow: inset 3px 0 0 rgba(245, 158, 11, 0.9), var(--shadow-subtle);
+  box-shadow:
+    inset 3px 0 0 rgba(245, 158, 11, 0.9),
+    var(--shadow-subtle);
 }
 
 .sidebar-logout {
@@ -179,7 +195,11 @@ a:hover {
   border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: 28px;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.84), rgba(255, 244, 229, 0.5)),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.84),
+      rgba(255, 244, 229, 0.5)
+    ),
     rgba(255, 255, 255, 0.78);
   box-shadow: var(--shadow-soft);
 }
@@ -195,6 +215,34 @@ a:hover {
     rgba(255, 255, 255, 0.8),
     rgba(239, 246, 255, 0.7)
   );
+}
+
+.auth-laptop-frame {
+  position: relative;
+  width: min(560px, 112%);
+  margin: 42px -34px -18px auto;
+  border-radius: 28px;
+  padding: 18px 18px 6px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.52), rgba(255, 244, 229, 0.42)),
+    rgba(255, 255, 255, 0.34);
+}
+
+.auth-laptop-frame::before {
+  position: absolute;
+  inset: 18% 8% 7%;
+  border-radius: 32px;
+  background: rgba(245, 158, 11, 0.18);
+  content: "";
+  filter: blur(34px);
+}
+
+.auth-laptop-frame img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 24px 34px rgba(15, 23, 42, 0.18));
 }
 
 .register-panel {
@@ -249,7 +297,7 @@ a:hover {
 .auth-panel p,
 .dashboard-hero p,
 .status-card p {
-  max-width: 520px;
+  max-width: 550px;
   margin: 0;
   color: var(--color-text-muted);
   font-size: 17px;
@@ -265,7 +313,11 @@ a:hover {
   border: 1px solid var(--color-border);
   border-radius: 22px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 244, 229, 0.58)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(255, 244, 229, 0.58)
+    ),
     var(--color-surface);
 }
 
@@ -313,7 +365,11 @@ a:hover {
   border-radius: 20px;
   padding: 16px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(239, 246, 255, 0.64)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(239, 246, 255, 0.64)
+    ),
     var(--color-surface);
 }
 
@@ -339,7 +395,11 @@ a:hover {
   justify-content: center;
   padding: 48px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.92)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(248, 250, 252, 0.92)
+    ),
     var(--color-surface);
 }
 
@@ -375,7 +435,11 @@ a:hover {
   border-radius: 18px;
   padding: 0 16px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.66), rgba(249, 250, 251, 0.98)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.66),
+      rgba(249, 250, 251, 0.98)
+    ),
     var(--color-input);
   color: var(--color-text-muted);
   transition:
@@ -388,7 +452,11 @@ a:hover {
 .input-wrap:focus-within {
   border-color: rgba(245, 158, 11, 0.58);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 244, 229, 0.62)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.92),
+      rgba(255, 244, 229, 0.62)
+    ),
     #ffffff;
   box-shadow:
     0 0 0 4px rgba(245, 158, 11, 0.13),
@@ -517,7 +585,11 @@ a:hover {
   padding: 0 16px;
   color: var(--color-text);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.86)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(248, 250, 252, 0.86)
+    ),
     var(--color-surface-soft);
 }
 
@@ -717,7 +789,11 @@ a:hover {
   border-radius: 20px;
   padding: 18px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(255, 244, 229, 0.72)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.88),
+      rgba(255, 244, 229, 0.72)
+    ),
     var(--color-surface);
   box-shadow: var(--shadow-subtle);
 }
@@ -752,7 +828,11 @@ a:hover {
   border-radius: 22px;
   padding: 16px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 244, 229, 0.64)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 244, 229, 0.64)
+    ),
     var(--color-surface);
 }
 
@@ -823,7 +903,11 @@ a:hover {
   border-radius: 24px;
   padding: 28px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.88)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(248, 250, 252, 0.88)
+    ),
     var(--color-surface);
   box-shadow: var(--shadow-card);
 }
@@ -895,7 +979,11 @@ a:hover {
   border-radius: 18px;
   padding: 14px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.72)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(248, 250, 252, 0.72)
+    ),
     var(--color-surface);
   transition:
     border-color 0.2s ease,
@@ -989,7 +1077,11 @@ a:hover {
   padding: 24px;
   color: var(--color-text-muted);
   background:
-    linear-gradient(145deg, rgba(248, 250, 252, 0.88), rgba(255, 244, 229, 0.48)),
+    linear-gradient(
+      145deg,
+      rgba(248, 250, 252, 0.88),
+      rgba(255, 244, 229, 0.48)
+    ),
     var(--color-surface-soft);
   font-weight: 800;
   text-align: center;
@@ -1014,20 +1106,33 @@ a:hover {
   border-radius: 24px;
   padding: 28px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.86)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(248, 250, 252, 0.86)
+    ),
     var(--color-surface);
   box-shadow: var(--shadow-card);
 }
 
 .transactions-side-panel {
   background:
-    linear-gradient(160deg, rgba(255, 244, 229, 0.66), rgba(255, 255, 255, 0.96) 46%, rgba(248, 250, 252, 0.86)),
+    linear-gradient(
+      160deg,
+      rgba(255, 244, 229, 0.66),
+      rgba(255, 255, 255, 0.96) 46%,
+      rgba(248, 250, 252, 0.86)
+    ),
     var(--color-surface);
 }
 
 .transactions-main-panel {
   background:
-    linear-gradient(180deg, rgba(248, 250, 252, 0.86), rgba(255, 255, 255, 0.98)),
+    linear-gradient(
+      180deg,
+      rgba(248, 250, 252, 0.86),
+      rgba(255, 255, 255, 0.98)
+    ),
     var(--color-surface-soft);
 }
 
@@ -1051,7 +1156,11 @@ a:hover {
   border-radius: 22px;
   padding: 14px;
   background:
-    linear-gradient(145deg, rgba(251, 248, 242, 0.92), rgba(248, 250, 252, 0.9)),
+    linear-gradient(
+      145deg,
+      rgba(251, 248, 242, 0.92),
+      rgba(248, 250, 252, 0.9)
+    ),
     var(--color-surface-warm);
 }
 
@@ -1074,7 +1183,11 @@ a:hover {
   border-radius: 20px;
   padding: 16px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.8)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(248, 250, 252, 0.8)
+    ),
     var(--color-surface);
   box-shadow: 0 8px 18px rgba(15, 23, 42, 0.035);
 }
@@ -1235,7 +1348,11 @@ a:hover {
   padding: 32px;
   color: var(--color-text-muted);
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(255, 244, 229, 0.52)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.88),
+      rgba(255, 244, 229, 0.52)
+    ),
     var(--color-surface);
   box-shadow: var(--shadow-card);
   text-align: center;
@@ -1324,7 +1441,11 @@ a:hover {
   border-radius: 16px;
   padding: 14px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.74)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(248, 250, 252, 0.74)
+    ),
     var(--color-surface);
 }
 
@@ -1428,7 +1549,11 @@ a:hover {
   border-radius: 22px;
   padding: 28px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.8)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(248, 250, 252, 0.8)
+    ),
     var(--color-surface);
   box-shadow: var(--shadow-card);
 }
@@ -1436,25 +1561,41 @@ a:hover {
 .metric-card.primary,
 .metric-card {
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(239, 246, 255, 0.66)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(239, 246, 255, 0.66)
+    ),
     var(--color-surface);
 }
 
 .metric-card.success {
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(240, 253, 244, 0.68)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(240, 253, 244, 0.68)
+    ),
     var(--color-surface);
 }
 
 .metric-card.danger {
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(254, 242, 242, 0.68)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(254, 242, 242, 0.68)
+    ),
     var(--color-surface);
 }
 
 .metric-card.amber {
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(255, 244, 229, 0.86)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(255, 244, 229, 0.86)
+    ),
     var(--color-surface);
 }
 
@@ -1660,7 +1801,11 @@ a:hover {
   border-radius: 18px;
   padding: 12px 16px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.86), rgba(255, 244, 229, 0.56)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.86),
+      rgba(255, 244, 229, 0.56)
+    ),
     var(--color-surface);
 }
 
@@ -1746,7 +1891,11 @@ a:hover {
   border-radius: 18px;
   padding: 16px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 244, 229, 0.52)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(255, 244, 229, 0.52)
+    ),
     var(--color-surface);
 }
 
@@ -1804,8 +1953,7 @@ a:hover {
   border-radius: 999px;
   padding: 14px;
   background:
-    linear-gradient(145deg, #ffffff, var(--color-accent-soft)),
-    #ffffff;
+    linear-gradient(145deg, #ffffff, var(--color-accent-soft)), #ffffff;
   box-shadow: var(--shadow-card);
   text-align: center;
   transform: translate(-50%, -50%);
@@ -1842,7 +1990,11 @@ a:hover {
   border-radius: 14px;
   padding: 10px 12px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.76)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(248, 250, 252, 0.76)
+    ),
     var(--color-surface);
 }
 
@@ -1884,7 +2036,11 @@ a:hover {
   border-radius: 18px;
   padding: 14px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.76)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(248, 250, 252, 0.76)
+    ),
     var(--color-surface);
 }
 
@@ -1959,7 +2115,11 @@ a:hover {
   border-radius: 18px;
   padding: 16px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(254, 242, 242, 0.48)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(254, 242, 242, 0.48)
+    ),
     var(--color-surface);
 }
 
@@ -2010,7 +2170,12 @@ a:hover {
   border-radius: 24px;
   padding: 28px;
   background:
-    linear-gradient(160deg, rgba(255, 244, 229, 0.7), rgba(255, 255, 255, 0.96) 48%, rgba(248, 250, 252, 0.88)),
+    linear-gradient(
+      160deg,
+      rgba(255, 244, 229, 0.7),
+      rgba(255, 255, 255, 0.96) 48%,
+      rgba(248, 250, 252, 0.88)
+    ),
     var(--color-surface);
   box-shadow: var(--shadow-card);
 }
@@ -2055,7 +2220,11 @@ a:hover {
   border-radius: 24px;
   padding: 22px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.76)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(248, 250, 252, 0.76)
+    ),
     var(--color-surface);
   box-shadow: var(--shadow-card);
 }
@@ -2063,14 +2232,22 @@ a:hover {
 .limit-card.warning {
   border-color: rgba(245, 158, 11, 0.34);
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(255, 244, 229, 0.86)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(255, 244, 229, 0.86)
+    ),
     var(--color-surface);
 }
 
 .limit-card.exceeded {
   border-color: rgba(239, 68, 68, 0.34);
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(254, 242, 242, 0.74)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(254, 242, 242, 0.74)
+    ),
     var(--color-surface);
 }
 
@@ -2134,7 +2311,11 @@ a:hover {
   border-radius: 16px;
   padding: 12px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(248, 250, 252, 0.9)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.72),
+      rgba(248, 250, 252, 0.9)
+    ),
     var(--color-surface-soft);
 }
 
@@ -2255,7 +2436,11 @@ a:hover {
   border-radius: 24px;
   padding: 28px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.86)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(248, 250, 252, 0.86)
+    ),
     var(--color-surface);
   box-shadow: var(--shadow-card);
 }
@@ -2361,7 +2546,11 @@ a:hover {
   border-radius: 24px;
   padding: 30px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.86)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(248, 250, 252, 0.86)
+    ),
     var(--color-surface);
   box-shadow: var(--shadow-card);
 }
@@ -2426,7 +2615,11 @@ a:hover {
   border-radius: 22px;
   padding: 20px 24px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 244, 229, 0.56)),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(255, 244, 229, 0.56)
+    ),
     var(--color-surface);
   box-shadow: var(--shadow-card);
 }
@@ -2469,6 +2662,12 @@ a:hover {
     min-height: 430px;
     padding: 34px;
     background-size: 128px auto;
+  }
+
+  .auth-laptop-frame {
+    width: min(520px, 100%);
+    margin: 28px auto -6px;
+    padding: 12px 12px 4px;
   }
 
   .auth-card {
@@ -2593,6 +2792,12 @@ a:hover {
   .content-header h1,
   .settings-header h1 {
     font-size: 38px;
+  }
+
+  .auth-laptop-frame {
+    margin-top: 22px;
+    border-radius: 20px;
+    padding: 8px 8px 2px;
   }
 
   .sidebar-nav {
