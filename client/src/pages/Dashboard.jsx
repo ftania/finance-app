@@ -155,8 +155,7 @@ export default function Dashboard() {
           <span className="eyebrow">{formatFullDate(summary.currentDate)}</span>
           <h1>Вітаємо, {user?.fullName || "радо бачити вас"}</h1>
           <p>
-            Огляд активних рахунків, руху коштів за день і фінансового
-            результату поточного місяця
+            Ваш баланс, рух коштів за сьогодні та результат поточного місяця
           </p>
         </div>
 
@@ -186,7 +185,7 @@ export default function Dashboard() {
       {!isLoading && !error && !hasDashboardData ? (
         <section className="dashboard-empty">
           <WalletCards size={28} aria-hidden="true" />
-          <h2>Поки немає даних для Dashboard</h2>
+          <h2>Поки немає даних для огляду</h2>
           <p>
             Підключіть рахунок або додайте перші транзакції, і тут зʼявиться
             повна картина бюджету.

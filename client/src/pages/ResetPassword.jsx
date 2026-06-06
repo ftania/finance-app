@@ -40,7 +40,7 @@ export default function ResetPassword() {
         <div className="auth-panel register-panel">
           <div className="brand-mark">F</div>
           <span className="eyebrow">Новий пароль</span>
-          <h1>Захистіть свій фінансовий простір</h1>
+          <h1>Створіть новий пароль</h1>
           <p>Створіть новий пароль і поверніться до планування бюджету</p>
         </div>
 

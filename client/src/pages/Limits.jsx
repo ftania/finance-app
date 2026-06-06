@@ -41,11 +41,14 @@ const statusConfig = {
   },
 };
 
-const formatMoney = (amount, currency = "UAH") =>
-  new Intl.NumberFormat("uk-UA", {
+const formatMoney = (amount, currency = "UAH") => {
+  const value = new Intl.NumberFormat("uk-UA", {
     style: "currency",
     currency,
   }).format(Number(amount || 0));
+
+  return currency === "UAH" ? value.replace("грн", "₴") : value;
+};
 
 const getProgressWidth = (percent) => `${Math.min(Math.max(Number(percent || 0), 0), 100)}%`;
 

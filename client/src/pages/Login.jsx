@@ -47,18 +47,17 @@ export default function Login() {
       <section className="auth-shell">
         <div className="auth-panel">
           <div className="brand-mark">F</div>
-          <span className="eyebrow">Personal finance</span>
+          <span className="eyebrow">Особисті фінанси</span>
           <h1>Ласкаво просимо</h1>
           <p>
-            Керуйте доходами, витратами та фінансовими цілями в одному зручному
-            просторі
+            Керуйте доходами, витратами й рахунками в одному зручному місці
           </p>
         </div>
 
         <form className="auth-card" onSubmit={handleSubmit}>
           <div className="form-heading">
             <span>Увійти</span>
-            <h2>Ваш фінансовий простір</h2>
+            <h2>Увійдіть до акаунта</h2>
           </div>
 
           {error ? <p className="form-error">{error}</p> : null}

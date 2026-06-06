@@ -214,7 +214,7 @@ export default function Reports() {
       <section className="content-header">
         <div>
           <span className="eyebrow">Звіти / Експорт</span>
-          <h1>Файли для аналізу</h1>
+          <h1>Звіти та експорт</h1>
           <p>
             Завантажуйте транзакції у CSV або сформуйте фінансовий PDF-звіт за
             вибраний період

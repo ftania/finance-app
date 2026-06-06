@@ -83,7 +83,7 @@ export default function Profile() {
     <main className="settings-page">
       <section className="settings-header">
         <span className="eyebrow">Профіль / Налаштування</span>
-        <h1>Налаштуйте свій фінансовий простір</h1>
+        <h1>Налаштування акаунта</h1>
         <p>
           Оновіть особисті дані, оберіть валюту та керуйте доступом до акаунта
         </p>

@@ -246,7 +246,7 @@ export default function Transactions() {
       <section className="content-header">
         <div>
           <span className="eyebrow">Транзакції</span>
-          <h1>Операції з коштами</h1>
+          <h1>Історія операцій</h1>
           <p>
             Переглядайте імпортовані операції, додавайте ручні транзакції та
             уточнюйте категорії й теги

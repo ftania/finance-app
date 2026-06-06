@@ -182,8 +182,8 @@ export default function Accounts() {
           <span className="eyebrow">Банки / Рахунки</span>
           <h1>Підключені рахунки</h1>
           <p>
-            Додайте Monobank token, щоб бачити актуальні баланси рахунків в
-            одному місці
+            Підключіть Monobank, щоб бачити актуальні баланси рахунків в одному
+            місці
           </p>
         </div>
       </section>
@@ -194,7 +194,7 @@ export default function Accounts() {
             <Building2 size={22} aria-hidden="true" />
             <div>
               <span>Monobank</span>
-              <h2>Підключення через token</h2>
+              <h2>Підключення Monobank</h2>
             </div>
           </div>
 

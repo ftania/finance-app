@@ -46,18 +46,17 @@ export default function Register() {
       <section className="auth-shell">
         <div className="auth-panel register-panel">
           <div className="brand-mark">F</div>
-          <span className="eyebrow">Personal finance</span>
+          <span className="eyebrow">Особисті фінанси</span>
           <h1>Ласкаво просимо</h1>
           <p>
-            Керуйте доходами, витратами та фінансовими цілями в одному зручному
-            просторі
+            Керуйте доходами, витратами й рахунками в одному зручному місці
           </p>
         </div>
 
         <form className="auth-card" onSubmit={handleSubmit}>
           <div className="form-heading">
             <span>Реєстрація</span>
-            <h2>Новий акаунт</h2>
+            <h2>Створіть акаунт</h2>
           </div>
 
           {error ? <p className="form-error">{error}</p> : null}
